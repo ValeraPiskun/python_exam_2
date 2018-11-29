@@ -17,15 +17,37 @@
 #    Сформувати структуру датасету для дного користувача.
 
 
-dataset = \
-{
+dataset = {
+    "hum01":{
+                "qwerty123":{
 
+                                "sell": 999.99
+                },
+                "qwer123":{
+
+                                "sell": 999.99
+                          }
+
+            },
+    "hum02":{
+                "qwerty123":{
+
+                                "sell": 999.99
+                },
+                "qwer123":{
+
+                                "sell": 999.99
+                          }
+
+            }
 
 }
 
-
-
-
-
-
-
+names=list(dataset.keys())
+for name in  names:
+        print(name)
+        phoneNames = list(dataset[name].keys())
+        for phoneName in phoneNames:
+            print(phoneName)
+            phoneSell=dataset[name][phoneName]["sell"]
+            print(phoneSell)
